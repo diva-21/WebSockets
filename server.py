@@ -12,15 +12,10 @@ async def server_handle(websocket):
         msg = await websocket.recv()
         print("client: " + msg)
 
-
-
-
-
-
 #starting the server async way
 start_server=websockets.serve(server_handle,"localhost",PORT)
 asyncio.get_event_loop().run_until_complete(start_server)
-asyncio.get_event_loop().run_forever()
+asyncio.get_event_loop().run_forever() #runs for ever
 
 
 
